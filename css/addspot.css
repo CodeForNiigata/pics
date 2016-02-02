@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+
+/*マップしたの座標表示*/
+.addspot-page #position {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color:#fff;
+	text-align: center;	
+	background: #888;
+	border-radius: 50px;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 8px;
+}
+
+.addspot-page  #reloadButtonDiv{
+	width:100%;
+	text-align:center;
+	display:block;
+}
+
+.addspot-page  #reloadButton{
+	float:left;
+	text-align:right;
+}
+
+.addspot-page  #area {
+	text-align: center;
+}
+
+
+.addspot-page  #image {
+	width: 70%;
+	margin: 16px auto 0 auto;
+	text-align: center;
+}
+
+/*画像を選択するボタンの装飾*/
+.addspot-page .file {
+	margin: 16px 0 12px;
+	display:inline-block;
+    position:relative;
+    overflow:hidden;
+    border-radius:5px;
+    background: #ff6600;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    line-height:30px;
+    width:180px;
+    cursor:pointer;
+    font-size:1.5rem;
+    font-weight: bold;
+}
+  
+.addspot-page .file input[type="file"] {
+	position:absolute;
+    top:0;
+    left:0;
+    padding:0px;
+    margin:0px;
+    width:100%;
+    height:100%;    
+    cursor:pointer;
+    opacity:0;
+}
+
+.addspot-page #sendButton{
+	margin:16px 8px;
+}
+
+.addspot-page #sendButton .button.disable{
+	opacity: 0.4;
+}
+
+
+.addspot-page #canvas {
+	width: 100%;
+	height: 250px;
+	/*border: solid 1px #ccc;*/
+	background: #b3b3b3;
+}
+
+.addspot-page #canvas .olControlAttribution {
+    font-size:13px;
+    bottom:3px;
+}
+
+.addspot-page  #map_curssor{
+	position: absolute;
+	/*250/2 - 16 = 109*/
+	top: 109px;
+	left : -webkit-calc(50% - 16px) ;/*safari iOS 7以降*/
+	left : calc(50% - 16px) ;/*Android4.4以降*/
+	z-index: 8888;
+}
+
+.addspot-page  #input_form{
+	clear:left;
+	width:100%;
+	/*background-color: rgba(200,255,200,1.00);	*/
+	/*background-color: rgba(160,200,220,1.00);*/
+}
+
+.addspot-page .input_marker{
+	float: left;
+	/*display:block;*/
+	width: 6%;
+	height: 45px;
+	background-color: rgba(20,200,20,1.00);	
+	border:none;
+	margin: 12px 0px;
+	/*margin-top:12px;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-right:0px;*/
+	font-size: 1.2em;
+}
+
+.addspot-page .input_marker2{
+	float: left;
+	width: 6%;
+	height: 90px;
+	background-color: rgba(20,200,20,1.00);	
+	border:none;
+	margin: 12px 0px;
+	font-size: 1.2em;
+}
+
+
+
+.addspot-page .clearLeft {
+	clear: left;
+}
+
+.addspot-page input{
+	font-size: 1.2em;
+	width:90%;
+	height:45px;
+	
+	margin-top:12px;
+	margin-bottom:12px;
+	margin-left:0%;
+	margin-right:2%;
+	
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	
+	-moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
+	border:none;
+}
+
+.addspot-page textarea{
+	font-size: 1.2em;
+	width:90%;
+	height:90px;
+	
+	margin-top:12px;
+	margin-bottom:12px;
+	margin-left:0%;
+	margin-right:2%;
+	
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	
+	-moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
+	border:none;
+}
+
+
+
+/*画像処理中の表示*/
+.addspot-page  #img_process {
+	display: none;
+	background-color: rgba(160,200,220,1.00);
+}
+
+/*ボタン*/
+.addspot-page .addspot-page button {
+    /* 文字サイズを1.4emに指定 */
+    font-size: 1.4em;
+    /* 文字の太さをboldに指定 */
+    font-weight: bold;
+    /* 縦方向に10px、
+     * 横方向に30pxの余白を指定 */
+    padding: 10px 30px;
+    /* 背景色を濃い青色に指定 */
+    background-color: rgba(10,200,220,1.00);
+    /* 文字色を白色に指定 */
+    color: #fff;
+    /* ボーダーをなくす */
+    border-style: none;
+    
+     /* 角丸の指定 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    display:block;
+    
+    margin-top:30px;
+    margin-bottom:60px;
+    margin-left:auto;
+    margin-right:auto;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    
+    <title>新潟「再発見」マッピングパーティー</title>
+	
+	<!--   CSS   -->
+    <link rel="stylesheet prefetch" href="css/onsenui.css">
+    <link rel="stylesheet prefetch" href="css/onsen-css-components.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- map.css -->
+	<link rel="stylesheet" type="text/css" href="css/addspot.css">
+	<!-- mapresult.css -->
+	<link rel="stylesheet" type="text/css" href="css/spotlist.css">
+	<!-- Bootstrap Latest compiled and minified CSS -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+    
+    <!--   JS   -->
+    <script src="js/onsenui_all.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.exif.js"></script>
+	<script src="js/jquery.canvasResize.js"></script>
+	<script src="js/jquery.csv-0.71.min.js"></script>
+	<script src="js/jquery.lazyload.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+	
+	<!--OpenStreetMap API用のスクリプト-->
+	<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	
+	<!-- 各ページ用JS -->
+	<script src="js/home.js"></script>
+	<script src="js/addspot.js"></script>
+	<script src="js/spotlist.js"></script>
+	<script src="js/csvbucket.js"></script>
+	
+	<!-- インデックスページ設定 -->
+	<script>
+		//地図の初期座標
+		INIT_LAT = ""+37.922303;
+		INIT_LNG = ""+139.044660;
+		
+		//ページインデックス
+		PAGE_HOME 		= 0;
+		PAGE_ADD_SPOT 	= 1;
+		PAGE_SPOT_LIST 	= 2;
+		PAGE_HELP 		= 3;
+		
+		//onsenui
+		ons.bootstrap();
+		ons.ready(function() {
+	      
+		    //タブバーの切り替えイベント
+			tabbar.on('prechange', function(event) {
+				switch(event.index){
+			  		case PAGE_HOME: 
+				  		break
+				  	case PAGE_ADD_SPOT: 
+				  		break
+				  	case PAGE_SPOT_LIST: 
+				  		break
+				  	case PAGE_HELP: 
+				  		break
+				  	
+			  	}
+			});
+			
+			tabbar.on('postchange', function(event) {
+				switch(event.index){
+			  		case PAGE_HOME: 
+			  		break
+				  	case PAGE_ADD_SPOT: 
+				  		init_addspot();
+				  		break
+				  	case PAGE_SPOT_LIST: 
+					  	init_spotlist();
+				  		break
+				  	case PAGE_HELP: 
+				  		break
+				  	
+			  	}
+			});
+	    });
+    </script>	
+  </head>
+  
+  <body>
+    
+	<ons-tabbar var="tabbar">
+	  <ons-tab page="view/home.php" label="ホーム" icon="fa-home" active="true"></ons-tab>
+	  <ons-tab page="view/addspot.php" label="スポット登録" icon="fa-camera"></ons-tab>
+	  <ons-tab page="view/spotlist.php" label="スポットリスト" icon="fa-map-marker"></ons-tab>
+	  <ons-tab page="view/help.php" label="ヘルプ" icon="fa-question-circle"></ons-tab>
+	</ons-tabbar>
+	
+  </body>
+</html>

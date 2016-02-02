@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 
+	ホーム画面
+ */
+ 
+.home-page .top-image {
+    padding: 2% 0;
+}
+
+.home-page .top-image img {
+	width: 100%;
+	height: auto;
+}
+
+.home-page .list__item p {
+	font-size: 1rem;
+	color: #333;
+	line-height: 140%;
+	line-height: 1.4rem;
+}
+
+
+/* 
+	スポット登録画面
+ */
+.addspot-page .input_form {
+	text-align: center;
+}
+
+.addspot-page .to-wrapper {
+  line-height: 1;
+  height: 62px;
+  padding: 10px;
+}
+
+.addspot-page .to-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.addspot-page .to-name {
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.addspot-page .to-email {
+  font-size: 14px;
+  opacity: 0.4;
+}
+
+.addspot-page .text-input {
+  margin-top: 4px;
+}
+
+.addspot-page .textarea {
+  margin-top: 4px;
+}
+
+.addspot-page .input-area {
+	margin-bottom: 48px;
+}
+
+.addspot-page .list-label {
+	display: block;
+	font-size: small;
+}
+
+.addspot-page .dialog-group {
+	z-index: 9999;
+}
+
+.addspot-page .list--inset {
+	border-radius: 8px;
+}
+
+
+/* 
+	ヘルプ画面
+ */
+.help-page ons-list-item > ons-icon {
+  margin: 0 4px 0 0;
+  opacity: 0.8;
+}
+
+.help-page .list-item-action {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 20px;
+  opacity: 0.3;
+}
+
+.help-page .list-item-action > ons-icon {
+  margin-top: 14px;
+}
+
+.help-page .list-item-note {
+  position: absolute;
+  right: 36px;
+  top: 0px;
+  font-size: 14px;
+}
+
+.help-page .list-item-note > .notification {
+  margin-top: 12px;
+}
+
+.help-page .lucent {
+  opacity: 0.4;
+}
+
+.help-page .app-description {
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
+
+
